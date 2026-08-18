@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>CodeCraft Academy - Gallery</title>
+
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/gallery.css">
+  
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar">
+
+
+    <div class="logo">
+      MyWebsite
+    </div>
+
+
+    <ul class="nav-menu">
+
+
+      <li>
+        <a href="home.html">
+
+          <i class="fa-solid fa-house"></i>
+
+          Home
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="about.html">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          About Us
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="course.html">
+
+          <i class="fa-solid fa-book"></i>
+
+          Course
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="training.html">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+          Training Program
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="technologies.html">
+
+          <i class="fa-solid fa-microchip"></i>
+
+          Technologies
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="project.html">
+
+          <i class="fa-solid fa-diagram-project"></i>
+
+          Project
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="gallery.html"
+           class="active">
+
+          <i class="fa-solid fa-images"></i>
+
+          Gallery
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="testimonials.html">
+
+          <i class="fa-solid fa-star"></i>
+
+          Testimonials
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="contact.html">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          Contact Us
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="login.html"
+           class="login-btn">
+
+          <i class="fa-solid fa-user"></i>
+
+          Login/Register
+
+        </a>
+      </li>
+
+
+      <li>
+        <a href="#"
+           class="icon-btn">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </a>
+      </li>
+
+
+    </ul>
+
+  </nav>
+
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="gallery-hero">
+
+
+    <div class="hero-content">
+
+
+      <div class="hero-tag">
+        📸 Learn • Create • Capture
+      </div>
+
+
+      <h1>
+        Explore Our Learning Gallery
+      </h1>
+
+
+      <p>
+        Explore workshops, student projects, training
+        sessions and memorable moments from CodeCraft Academy.
+      </p>
+
+
+      <div class="hero-buttons">
+
+
+        <a href="#gallery"
+           class="btn btn-primary">
+
+          View Gallery
+
+        </a>
+
+
+        <a href="#upload"
+           class="btn btn-secondary">
+
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+
+          Upload Photo
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="gallery-hero-card">
+
+
+      <i class="fa-solid fa-images"></i>
+
+
+      <h2>
+        Our Memories
+      </h2>
+
+
+      <p>
+        Share and manage your favorite moments,
+        project screenshots and learning experiences.
+      </p>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ================= UPLOAD ================= -->
+
+  <section class="upload-section"
+           id="upload">
+
+
+    <div class="section-title">
+
+      <h2>
+        Upload Your Photo
+      </h2>
+
+
+      <p>
+        Add project screenshots, workshop photos
+        or your favorite academy memories.
+      </p>
+
+    </div>
+
+
+
+    <div class="upload-box">
+
+
+      <div class="upload-icon">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+      </div>
+
+
+      <h2>
+        Upload Image
+      </h2>
+
+
+      <p>
+        Supported formats: JPG, JPEG, PNG, WEBP
+      </p>
+
+
+      <label
+        for="photoInput"
+        class="upload-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+        Choose Photos
+
+      </label>
+
+
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        multiple>
+
+
+      <div class="file-info"
+           id="fileInfo">
+
+        No files selected
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= GALLERY ================= -->
+
+  <section class="section"
+           id="gallery">
+
+
+    <div class="section-title">
+
+      <h2>
+        Photo Gallery
+      </h2>
+
+
+      <p>
+        View, open and remove your uploaded photos.
+      </p>
+
+    </div>
+
+
+
+    <div class="gallery-control">
+
+      <button
+        class="remove-all"
+        onclick="removeAllPhotos()">
+
+        <i class="fa-solid fa-trash"></i>
+
+        Remove All
+
+      </button>
+
+    </div>
+
+
+
+    <div class="gallery-grid"
+         id="galleryGrid">
+
+
+      <!-- DEFAULT PHOTO 1 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Coding Workshop">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Coding Workshop
+          </h3>
+
+          <p>
+            Students learning modern web development.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DEFAULT PHOTO 2 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Team Training">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Team Training
+          </h3>
+
+          <p>
+            Practical learning and team collaboration.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DEFAULT PHOTO 3 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Student Project">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Student Projects
+          </h3>
+
+          <p>
+            Students building real-world applications.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DEFAULT PHOTO 4 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Students">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Learning Together
+          </h3>
+
+          <p>
+            Collaborative learning environment.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DEFAULT PHOTO 5 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Programming">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Programming Lab
+          </h3>
+
+          <p>
+            Hands-on coding and development practice.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- DEFAULT PHOTO 6 -->
+
+      <div class="gallery-card">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Workshop">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            Training Session
+          </h3>
+
+          <p>
+            Interactive sessions with expert mentors.
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CTA ================= -->
+
+  <section class="cta">
+
+
+    <i class="fa-solid fa-camera"></i>
+
+
+    <h2>
+      Have a Great Learning Moment?
+    </h2>
+
+
+    <p>
+      Upload your project screenshot or training
+      memory to the gallery.
+    </p>
+
+
+    <a href="#upload"
+       class="cta-btn">
+
+      Upload Photo
+
+    </a>
+
+
+  </section>
+
+
+
+  <!-- ================= LIGHTBOX ================= -->
+
+  <div class="lightbox"
+       id="lightbox">
+
+
+    <button
+      class="close-lightbox"
+      onclick="closeLightbox()">
+
+      <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <img
+      id="lightboxImage"
+      src=""
+      alt="Full Image">
+
+  </div>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      © CodeCraft Academy. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+
+    /* ================= FILE UPLOAD ================= */
+
+    const photoInput =
+      document.getElementById("photoInput");
+
+
+    const galleryGrid =
+      document.getElementById("galleryGrid");
+
+
+    const fileInfo =
+      document.getElementById("fileInfo");
+
+
+
+    photoInput.addEventListener(
+      "change",
+      function() {
+
+
+        const files =
+          Array.from(this.files);
+
+
+        if (files.length === 0) {
+
+          fileInfo.textContent =
+            "No files selected";
+
+          return;
+
+        }
+
+
+        fileInfo.textContent =
+          files.length +
+          " photo(s) selected";
+
+
+        files.forEach(function(file) {
+
+
+          if (!file.type.startsWith("image/")) {
+
+            return;
+
+          }
+
+
+          const reader =
+            new FileReader();
+
+
+          reader.onload =
+            function(event) {
+
+              addPhoto(
+                event.target.result,
+                file.name
+              );
+
+            };
+
+
+          reader.readAsDataURL(file);
+
+        });
+
+
+        this.value = "";
+
+      }
+    );
+
+
+
+    /* ================= ADD PHOTO ================= */
+
+    function addPhoto(
+      imageSrc,
+      fileName
+    ) {
+
+
+      const card =
+        document.createElement("div");
+
+
+      card.className =
+        "gallery-card";
+
+
+      card.innerHTML = `
+
+        <img
+          src="${imageSrc}"
+          class="gallery-image"
+          onclick="openLightbox(this.src)"
+          alt="Uploaded Photo">
+
+
+        <div class="gallery-content">
+
+          <h3>
+            ${fileName}
+          </h3>
+
+          <p>
+            Uploaded Photo
+          </p>
+
+
+          <div class="gallery-actions">
+
+            <button
+              class="view-btn"
+              onclick="openLightbox(this.parentElement.parentElement.previousElementSibling.src)">
+
+              <i class="fa-solid fa-eye"></i>
+
+              View
+
+            </button>
+
+
+            <button
+              class="remove-btn"
+              onclick="removePhoto(this)">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Remove
+
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+
+      galleryGrid.prepend(card);
+
+    }
+
+
+
+    /* ================= REMOVE PHOTO ================= */
+
+    function removePhoto(button) {
+
+
+      const card =
+        button.closest(".gallery-card");
+
+
+      if (card) {
+
+        card.remove();
+
+      }
+
+    }
+
+
+
+    /* ================= REMOVE ALL ================= */
+
+    function removeAllPhotos() {
+
+
+      const cards =
+        document.querySelectorAll(
+          ".gallery-card"
+        );
+
+
+      if (cards.length === 0) {
+
+        alert("Gallery is already empty.");
+
+        return;
+
+      }
+
+
+      const confirmDelete =
+        confirm(
+          "Are you sure you want to remove all photos?"
+        );
+
+
+      if (confirmDelete) {
+
+        galleryGrid.innerHTML = "";
+
+
+        galleryGrid.innerHTML = `
+
+          <div class="empty-gallery">
+
+            <i class="fa-regular fa-images"></i>
+
+            <h3>
+              Gallery is Empty
+            </h3>
+
+            <p>
+              Upload some photos to display them here.
+            </p>
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+
+    /* ================= LIGHTBOX ================= */
+
+    function openLightbox(imageSrc) {
+
+
+      const lightbox =
+        document.getElementById(
+          "lightbox"
+        );
+
+
+      const lightboxImage =
+        document.getElementById(
+          "lightboxImage"
+        );
+
+
+      lightboxImage.src =
+        imageSrc;
+
+
+      lightbox.classList.add(
+        "active"
+      );
+
+    }
+
+
+
+    function closeLightbox() {
+
+
+      const lightbox =
+        document.getElementById(
+          "lightbox"
+        );
+
+
+      lightbox.classList.remove(
+        "active"
+      );
+
+
+      document.getElementById(
+        "lightboxImage"
+      ).src = "";
+
+    }
+
+
+
+    /* ================= ESC KEY ================= */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+
+    /* ================= CLICK OUTSIDE IMAGE ================= */
+
+    document.getElementById(
+      "lightbox"
+    ).addEventListener(
+      "click",
+      function(event) {
+
+
+        if (
+          event.target === this
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
